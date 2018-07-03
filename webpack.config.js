@@ -8,8 +8,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: 'Webpack test app',
-    template: 'public/index.html'
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Webpack test app',
+      template: 'public/index.html',
+      minify: { collapseWhitespace: true }
+    })
+  ]
 };
