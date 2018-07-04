@@ -1,12 +1,14 @@
-import _ from 'lodash';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import configureStore from './store/configureStore';
 
-function component() {
-  var element = document.createElement('div');
+const store = configureStore();
 
-  let user1 = {name: 'somename', email: 'a@b.c'};
-  let user2 = {...user1, name: 'someothername'};
-  element.innerHTML = _.join(['Hello', user2.name], ' ');
-
-  return element;
-}
-document.getElementById('root').appendChild(component());
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
