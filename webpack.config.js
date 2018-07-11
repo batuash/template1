@@ -18,13 +18,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx|mjs)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015'],
-            presets: ['react']
+            presets: [require.resolve('babel-preset-react-app')]
           }
         }
       }
