@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "homepage": "http://batuash.github.io/addwebpack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=development webpack-dev-server --mode development",
-    "build": "NODE_ENV=development webpack --mode production"
+    "build": "NODE_ENV=development webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^3.1.2",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "redux-logger": "^3.0.6",
     "webpack": "^4.5.0",
