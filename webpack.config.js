@@ -26,6 +26,10 @@ module.exports = {
             presets: [require.resolve('babel-preset-react-app')]
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   },
