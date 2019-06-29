@@ -29,5 +29,6 @@
     gruntInit.sass.dev.files[styleCSS] = styleSCSS;
     grunt.initConfig(gruntInit);
     grunt.registerTask('default', ['sass:dev', 'watch']);
+    grunt.registerTask('css', ['sass:dev']);
   };
 })(module);
