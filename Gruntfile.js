@@ -21,7 +21,7 @@
       watch: {
         css: {
           files: [core + '*.scss'],
-          tasks: ['scss']
+          tasks: ['sass']
         }
       }
     };
